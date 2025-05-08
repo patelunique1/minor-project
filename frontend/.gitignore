@@ -1,0 +1,7 @@
+# Ignore node dependencies
+node_modules/
+
+# Ignore Python bytecode cache
+__pycache__/
+*.py[cod]
+git add .gitignore

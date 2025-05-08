@@ -1,0 +1,328 @@
+{
+  "target_code": [
+    "def is_even(n):\n    return n % 2 == 1  # Wrong condition for even check",
+    "def is_even(n):\n    return n % 2 == 1  # Incorrect: this checks for odd, not even",
+    "def is_even(n):\n    return n % 2 == 1  # Bug: should be n % 2 == 0",
+    "def is_even(n):\n    return n % 2 == 1"
+  ],
+  "language": "python",
+  "results": {
+    "gemini": {
+      "zero_shot": {
+        "candidates": [
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 5.4384,
+            "sum_entropy": 5.9464
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0",
+            "mean_entropy": 3.1341,
+            "sum_entropy": 5.0346
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\n    if n % 2 == 0:",
+            "mean_entropy": 3.4346,
+            "sum_entropy": 4.1365
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0",
+            "mean_entropy": 4.9845,
+            "sum_entropy": 5.7343
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n): return n % 2 == 0",
+            "mean_entropy": 5.7335,
+            "sum_entropy": 6.8345
+          }
+        ]
+      },
+      "few_shot": {
+        "candidates": [
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 3.2762,
+            "sum_entropy": 5.3912
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 3.8945,
+            "sum_entropy": 5.2342
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0",
+            "mean_entropy": 3.4348,
+            "sum_entropy": 5.145
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):return n % 2 == 0",
+            "mean_entropy": 3.8038,
+            "sum_entropy": 5.1623
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0",
+            "mean_entropy": 3.9451,
+            "sum_entropy": 4.7593
+          }
+        ]
+      },
+      "cot": {
+        "candidates": [
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 2.3208,
+            "sum_entropy": 4.1430
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 2.5234,
+            "sum_entropy": 3.7305
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 3.3494,
+            "sum_entropy": 4.7324
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 3.5708,
+            "sum_entropy": 4.3051
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0",
+            "mean_entropy": 2.7091,
+            "sum_entropy": 3.8054
+          }
+        ]
+      },
+      "tot": {
+        "candidates": [
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    if n % 2 == 0:\n        return True\n    else:\n        return False",
+            "mean_entropy": 1.6334,
+            "sum_entropy": 2.8473
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 1.7888,
+            "sum_entropy": 2.4344
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 1.8321,
+            "sum_entropy": 2.2443
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 1.9244,
+            "sum_entropy": 2.2444
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 2.0315,
+            "sum_entropy": 2.3269
+          }
+        ]
+      }
+    },
+    "codet5": {
+      "zero_shot": {
+        "candidates": [
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 5.4784,
+            "sum_entropy": 5.9434
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\n    if n % 2 == 0:   return True\n",
+            "mean_entropy": 4.4136,
+            "sum_entropy": 5.0365
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0",
+            "mean_entropy": 4.9975,
+            "sum_entropy": 5.7763
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n): return n % 2 == 0",
+            "mean_entropy": 5.7435,
+            "sum_entropy": 6.8445
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0",
+            "mean_entropy": 6.1171,
+            "sum_entropy": 7.0936
+          }
+        ]
+      },
+      "few_shot": {
+        "candidates": [
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 3.9762,
+            "sum_entropy": 5.3992
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 3.9945,
+            "sum_entropy": 5.2942
+          },
+           {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0",
+            "mean_entropy": 3.428,
+            "sum_entropy": 5.1267
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "# To fix the bug, we need to change the condition to `n % 2 == 0`\n def is_even(n):return n % 2 == 0",
+            "mean_entropy": 3.8078,
+            "sum_entropy": 5.0623
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0",
+            "mean_entropy": 3.9451,
+            "sum_entropy": 4.7593
+          }
+        ]
+      },
+      "cot": {
+        "candidates": [
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    if n % 2 == 0:\n        return True\n    else:\n        return False",
+            "mean_entropy": 3.3597,
+            "sum_entropy": 4.7344
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 2.5734,
+            "sum_entropy": 3.7485
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 3.4098,
+            "sum_entropy": 4.3524
+          },
+          {
+            "compile_ok": true,
+            "test_ok": false,
+            "code": "def is_even(n):\n    return n % 2 == 0 #fixed",
+            "mean_entropy": 2.1238,
+            "sum_entropy": 4.1567
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0 \n This",
+            "mean_entropy": 2.7798,
+            "sum_entropy": 3.8953
+          }
+        ]
+      },
+      "tot": {
+        "candidates": [
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    if n % 2 == 0:\n        return True\n    else:\n        return False",
+            "mean_entropy": 1.6447,
+            "sum_entropy": 2.6865
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 1.0059,
+            "sum_entropy": 2.1241
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 1.2315,
+            "sum_entropy": 2.3269
+          },
+          {
+            "compile_ok": true,
+            "test_ok": true,
+            "code": "def is_even(n):\n    return n % 2 == 0",
+            "mean_entropy": 1.7715,
+            "sum_entropy": 2.9498
+          },
+          {
+            "compile_ok": false,
+            "test_ok": false,
+            "code": "def is_even(n):\nreturn n % 2 == 0",
+            "mean_entropy": 1.9962,
+            "sum_entropy": 2.836
+          }
+        ]
+      }
+    }
+  }
+}
+

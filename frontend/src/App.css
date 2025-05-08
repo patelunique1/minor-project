@@ -1,0 +1,101 @@
+/* Global Styles */
+body {
+  background: linear-gradient(135deg, #f0f4ff, #e6f0ff, #ffffff);
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.94);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin-top: 40px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: #007bff;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+/* Textarea */
+textarea.form-control {
+  font-family: monospace;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Result Card */
+.result-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Patch Status Badge */
+.result-card .badge {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Code Block */
+.code-block,
+pre.bg-white {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #212529;
+  border: 1px solid #e0e0e0;
+}
+
+/* Form Inputs */
+input.form-control,
+select.form-select {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Button */
+button.btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Section Divider */
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 2px solid #dee2e6;
+}
