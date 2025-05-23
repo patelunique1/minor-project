@@ -34,7 +34,7 @@ Frontend (React) --> Backend (Flask)
     Entropy Scorer                Evaluation Hub (Syntax + Test)
              \___________________________/
                           |
-                    Refine Code
+                    Refined Code
 ```
 
 ## Prerequisites
