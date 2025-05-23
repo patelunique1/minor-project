@@ -21,8 +21,6 @@ The pipeline supports automated repair of Python functions and is designed to be
 - **Two-Stage Evaluation**:
   - *Syntax Check*: Validate code structure using Python's AST.
   - *Test Suite Execution*: Ensure correctness via functional tests.
-- **Logging & Feedback Loop**: Central log captures prompt type, entropy score, compilation status and test results.
-- **Privacy Control**: Keep code local by using only CodeT5 or selectively enable Gemini.
 
 ## System Architecture
 
